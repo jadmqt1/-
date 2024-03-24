@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategorieController;
 use App\Http\Controllers\GroupeController;
 use App\Http\Controllers\ModeleController;
 use App\Http\Controllers\NoteController;
@@ -21,3 +22,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('categories', CategorieController::class);
