@@ -1,11 +1,7 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\CategorieController;
-use App\Http\Controllers\GroupeController;
-use App\Http\Controllers\ModeleController;
-use App\Http\Controllers\NoteController;
-use App\Http\Controllers\StagiareController;
-use App\Models\Note;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,3 +20,4 @@ Route::get('/', function () {
 });
 
 Route::resource('categories', CategorieController::class);
+Route::resource('articles', ArticleController::class);
