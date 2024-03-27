@@ -101,8 +101,8 @@
                                 <td
                                     class="p-2 align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
                                     <form action="{{ route('articles.destroy', $article->id) }}" method="post">
-                                        <a href="{{ route('articles.edit', $article->id) }}"
-                                            class="text-primary bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">delete</a>
+                                        <a href="{{ route('articlesEdit.edit', $article->id) }}"
+                                            class="text-primary bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">edit</a>
                                         @csrf
                                         @method('DELETE')
                                         <button
