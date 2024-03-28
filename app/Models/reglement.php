@@ -7,15 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class panier extends Model
+class reglement extends Model
 {
-    public function client():HasMany
+    public function bonliv():HasMany
     {
-        return $this->hasMany(client::class);
+        return $this->hasMany(BonLivraison::class);
     }
-    public function article_panier():BelongsTo
+    public function mode():BelongsTo
     {
-        return $this->belongsTo(article_panier::class);
+        return $this->belongsTo(mode_Regl::class);
     }
     use HasFactory;
 }

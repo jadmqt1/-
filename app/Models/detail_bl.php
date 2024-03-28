@@ -7,16 +7,17 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class client extends Model
+class detail_bl extends Model
 {
-    protected $fillable =  ['nom','prenom','ville','adresse','password','email'];
-    public function panier():BelongsTo
+
+    use HasFactory;
+    public function article():HasMany
     {
-        return $this->belongsTo(panier::class);
+        return $this->hasMany(article::class);
     }
-    public function bonlivaison():HasMany
+    public function bonLivraison():HasMany
     {
         return $this->hasMany(BonLivraison::class);
     }
-    use HasFactory;
+
 }
