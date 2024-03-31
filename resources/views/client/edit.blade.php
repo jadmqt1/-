@@ -26,26 +26,31 @@
                                     @csrf
                                     @method('put')
                                     <div class="mb-4">
+                                        <label for="">nom</label>
                                         <input type="text" name="nom" value="{{ $client->nom }}"
                                             class="text-sm focus:shadow-soft-primary-outline leading-5.6 ease-soft block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding py-2 px-3 font-normal text-gray-700 transition-all focus:border-fuchsia-300 focus:bg-white focus:text-gray-700 focus:outline-none focus:transition-shadow"
                                             placeholder="categorie" aria-label="Password" aria-describedby="password-addon">
                                     </div>
                                     <div class="mb-4">
+                                        <label for="">prenom</label>
                                         <input name="prenom" type="text" value="{{ $client->prenom }}"
                                             class="text-sm focus:shadow-soft-primary-outline leading-5.6 ease-soft block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding py-2 px-3 font-normal text-gray-700 transition-all focus:border-fuchsia-300 focus:bg-white focus:text-gray-700 focus:outline-none focus:transition-shadow"
                                             placeholder="categorie" aria-label="Password" aria-describedby="password-addon">
                                     </div>
                                     <div class="mb-4">
+                                        <label for="">adresse</label>
                                         <input name="adresse" type="text" value="{{ $client->adresse }}"
                                             class="text-sm focus:shadow-soft-primary-outline leading-5.6 ease-soft block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding py-2 px-3 font-normal text-gray-700 transition-all focus:border-fuchsia-300 focus:bg-white focus:text-gray-700 focus:outline-none focus:transition-shadow"
                                             placeholder="categorie" aria-label="Password" aria-describedby="password-addon">
                                     </div>
                                     <div class="mb-4">
+                                        <label for="">ville</label>
                                         <input name="ville" type="text" value="{{ $client->ville }}"
                                             class="text-sm focus:shadow-soft-primary-outline leading-5.6 ease-soft block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding py-2 px-3 font-normal text-gray-700 transition-all focus:border-fuchsia-300 focus:bg-white focus:text-gray-700 focus:outline-none focus:transition-shadow"
                                             placeholder="categorie" aria-label="Password" aria-describedby="password-addon">
                                     </div>
                                     <div class="mb-4">
+                                        <label for="">email</label>
                                         <input name="email" type="email" value="{{ $client->email }}"
                                             class="text-sm focus:shadow-soft-primary-outline leading-5.6 ease-soft block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding py-2 px-3 font-normal text-gray-700 transition-all focus:border-fuchsia-300 focus:bg-white focus:text-gray-700 focus:outline-none focus:transition-shadow"
                                             placeholder="categorie" aria-label="Password" aria-describedby="password-addon">

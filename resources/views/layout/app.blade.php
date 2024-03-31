@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -23,46 +22,6 @@
     <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
     <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
   </head>
-=======
-    <!--
-    =========================================================
-    * Soft UI Dashboard Tailwind - v1.0.5
-    =========================================================
-
-    * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-tailwind
-    * Copyright 2023 Creative Tim (https://www.creative-tim.com)
-    * Licensed under MIT (https://www.creative-tim.com/license)
-    * Coded by Creative Tim
-
-    =========================================================
-
-    * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-    -->
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png" />
-        <link rel="icon" type="image/png" href="../assets/img/favicon.png" />
-        <title>Soft UI Dashboard Tailwind</title>
-        <!--     Fonts and icons     -->
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
-        <!-- Font Awesome Icons -->
-        <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-        <!-- Nucleo Icons -->
-        <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
-        <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
-        <!-- Main Styling -->
-        <link href="../assets/css/soft-ui-dashboard-tailwind.css?v=1.0.5" rel="stylesheet" />
-
-        <!-- tailwind -->
-    @vite(['resources/css/app.css','resources/js/app.js'])
-        <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
-        <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
-    </head>
->>>>>>> halimi
 
     <body class="m-0 font-sans text-base antialiased font-normal leading-default bg-gray-50 text-slate-500">
 
@@ -80,7 +39,7 @@
         <div class="items-center block w-auto max-h-screen overflow-auto h-sidenav grow basis-full">
             <ul class="flex flex-col pl-0 mb-0">
             <li class="mt-0.5 w-full">
-                <a class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors" href="../pages/dashboard.html">
+                <a class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors" href="{{route("articles.index")}}">
                 <div class="shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5">
                     <svg width="12px" height="12px" viewBox="0 0 45 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <title>shop</title>
@@ -102,17 +61,17 @@
                     </g>
                     </svg>
                 </div>
-                <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Dashboard</span>
+                <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">articles</span>
                 </a>
             </li>
 
             <li class="mt-0.5 w-full">
-                <a class="py-2.7 shadow-soft-xl text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap rounded-lg bg-white px-4 font-semibold text-slate-700 transition-colors" href="../pages/tables.html">
-                <div class="bg-gradient-to-tl from-purple-700 to-pink-500 shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5">
+                <a class="py-2.7  text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap rounded-lg  px-4 font-semibold text-slate-700 transition-colors" href="{{route("categories.index")}}">
+                <div class="shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5">
                     <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <title>office</title>
                     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                        <g transform="translate(-1869.000000, -293.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                        <g transform="translate(-1869.000000, -293.000000)" fill="#000000" fill-rule="nonzero">
                         <g transform="translate(1716.000000, 291.000000)">
                             <g transform="translate(153.000000, 2.000000)">
                             <path class="opacity-60" d="M12.25,17.5 L8.75,17.5 L8.75,1.75 C8.75,0.78225 9.53225,0 10.5,0 L31.5,0 C32.46775,0 33.25,0.78225 33.25,1.75 L33.25,12.25 L29.75,12.25 L29.75,3.5 L12.25,3.5 L12.25,17.5 Z"></path>
@@ -123,12 +82,12 @@
                     </g>
                     </svg>
                 </div>
-                <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Tables</span>
+                <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">categories</span>
                 </a>
             </li>
 
             <li class="mt-0.5 w-full">
-                <a class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors" href="../pages/billing.html">
+                <a class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors" href="{{route("clients.index")}}">
                 <div class="shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center fill-current stroke-0 text-center xl:p-2.5">
                     <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <title>credit-card</title>
@@ -144,7 +103,7 @@
                     </g>
                     </svg>
                 </div>
-                <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Billing</span>
+                <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">clients</span>
                 </a>
             </li>
 

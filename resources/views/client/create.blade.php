@@ -1,8 +1,6 @@
 @extends('layout.app')
 @section('content')
-use App\Models\categorie;
-$categories = categorie::all();
-?>
+
 <main class="mt-0 transition-all duration-200 ease-soft-in-out ps">
     <section class="min-h-screen mb-32">
         <div class="relative flex items-start pt-12 pb-56 m-4 overflow-hidden bg-center bg-cover min-h-50-screen rounded-xl"
@@ -31,32 +29,32 @@ $categories = categorie::all();
                                 <div class="mb-4">
                                     <input type="text" name="nom"
                                         class="text-sm focus:shadow-soft-primary-outline leading-5.6 ease-soft block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding py-2 px-3 font-normal text-gray-700 transition-all focus:border-fuchsia-300 focus:bg-white focus:text-gray-700 focus:outline-none focus:transition-shadow"
-                                        placeholder="categorie" aria-label="Password" aria-describedby="password-addon">
+                                        placeholder="nom" aria-label="Password" aria-describedby="password-addon">
                                 </div>
                                 <div class="mb-4">
                                     <input name="prenom" type="text"
                                         class="text-sm focus:shadow-soft-primary-outline leading-5.6 ease-soft block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding py-2 px-3 font-normal text-gray-700 transition-all focus:border-fuchsia-300 focus:bg-white focus:text-gray-700 focus:outline-none focus:transition-shadow"
-                                        placeholder="categorie" aria-label="Password" aria-describedby="password-addon">
+                                        placeholder="prenom" aria-label="Password" aria-describedby="password-addon">
                                 </div>
                                 <div class="mb-4">
                                     <input name="adresse" type="text"
                                         class="text-sm focus:shadow-soft-primary-outline leading-5.6 ease-soft block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding py-2 px-3 font-normal text-gray-700 transition-all focus:border-fuchsia-300 focus:bg-white focus:text-gray-700 focus:outline-none focus:transition-shadow"
-                                        placeholder="categorie" aria-label="Password" aria-describedby="password-addon">
+                                        placeholder="adresse" aria-label="Password" aria-describedby="password-addon">
                                 </div>
                                 <div class="mb-4">
                                     <input name="ville" type="text"
                                         class="text-sm focus:shadow-soft-primary-outline leading-5.6 ease-soft block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding py-2 px-3 font-normal text-gray-700 transition-all focus:border-fuchsia-300 focus:bg-white focus:text-gray-700 focus:outline-none focus:transition-shadow"
-                                        placeholder="categorie" aria-label="Password" aria-describedby="password-addon">
+                                        placeholder="ville" aria-label="Password" aria-describedby="password-addon">
                                 </div>
                                 <div class="mb-4">
                                     <input name="email" type="email"
                                         class="text-sm focus:shadow-soft-primary-outline leading-5.6 ease-soft block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding py-2 px-3 font-normal text-gray-700 transition-all focus:border-fuchsia-300 focus:bg-white focus:text-gray-700 focus:outline-none focus:transition-shadow"
-                                        placeholder="categorie" aria-label="Password" aria-describedby="password-addon">
+                                        placeholder="email" aria-label="Password" aria-describedby="password-addon">
                                 </div>
                                 <div class="mb-4">
                                     <input name="password" type="password"
                                         class="text-sm focus:shadow-soft-primary-outline leading-5.6 ease-soft block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding py-2 px-3 font-normal text-gray-700 transition-all focus:border-fuchsia-300 focus:bg-white focus:text-gray-700 focus:outline-none focus:transition-shadow"
-                                        placeholder="categorie" aria-label="Password" aria-describedby="password-addon">
+                                        placeholder="password" aria-label="Password" aria-describedby="password-addon">
                                 </div>
                                 <div class="text-center">
                                     <button type="submit"

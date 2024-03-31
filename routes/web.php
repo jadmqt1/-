@@ -21,10 +21,11 @@ Route::get('/', function () {
 });
 
 Route::resource('categories', CategorieController::class);
+Route::get('categoriesEdit/{id}', [ArticleController::class, 'edit'])->name('categoriesEdit.edit');
+
 Route::resource('articles', ArticleController::class);
-Route::get('articleEdit/{id}', [ArticleController::class, 'edit'])->name('articlesEdit.edit');
+Route::get('articlesEdit/{id}', [ArticleController::class, 'edit'])->name('articlesEdit.edit');
 
 Route::resource('clients', ClientController::class);
-Route::get('clientEdit/{id}',[ClientController::class,'edit'])->name('clientEdit.edit');
-// Route::put('client/{id}',[ClientController::class,'update'])->name('client.update');
+Route::get('clientsEdit/{id}',[ClientController::class,'edit'])->name('clientEdit.edit');
 

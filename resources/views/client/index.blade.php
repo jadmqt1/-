@@ -86,11 +86,11 @@
                                             class="p-2 align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
                                             <form action="{{ route('clients.destroy', $client->id) }}" method="post">
                                                 <a href="{{ route('clientEdit.edit', $client->id) }}"
-                                                    class="text-primary bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">edit</a>
+                                                    class="text-white bg-gradient-to-r from-green-500 via-green-500 to-green-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">edit</a>
                                                 @csrf
                                                 @method('DELETE')
                                                 <button
-                                                    class="text-primary bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">delete</button>
+                                                    class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">delete</button>
                                             </form>
                                         </td>
                                     </tr>
