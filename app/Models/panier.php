@@ -5,17 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class article extends Model
+class panier extends Model
 {
-    protected $fillable = ['designation','description','image','tva','categorie_id','status'];
-    public function categorie():BelongsTo
+    public function client():HasMany
     {
-        return $this->belongsTo(categorie::class);
-    }
-    public function detail():BelongsTo
-    {
-        return $this->belongsTo(detail_bl::class);
+        return $this->hasMany(client::class);
     }
     public function article_panier():BelongsTo
     {

@@ -1,9 +1,6 @@
 @extends('layout.app')
 @section('content')
-<?php
-    use  App\Models\categorie;
-    $categories = categorie::all();
-    ?>
+
 <main class="mt-0 transition-all duration-200 ease-soft-in-out ps">
     <section class="min-h-screen mb-32">
         <div class="relative flex items-start pt-12 pb-56 m-4 overflow-hidden bg-center bg-cover min-h-50-screen rounded-xl"

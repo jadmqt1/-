@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\article;
 use Illuminate\Http\Request;
-
+use  App\Models\categorie;
 class ArticleController extends Controller
 {
     /**
@@ -12,6 +12,7 @@ class ArticleController extends Controller
      */
     public function index()
 {
+
     $articles = Article::all();
     return view('article.index', ['articles' => $articles]);
 }
@@ -22,7 +23,8 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        return view ('article.create');
+        $categories = categorie::all();
+        return view ('article.create',['categories'=>$categories]);
     }
 
     /**
@@ -36,7 +38,7 @@ class ArticleController extends Controller
             $image->move($destinationPath, $profileImage);
             $request['image'] = "$profileImage";
         };
-        Article::create($request->post());
+        article::create($request->post());
         return redirect()->route('articles.index');
     }
 
@@ -51,11 +53,10 @@ class ArticleController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit($id)
     {
-        return view ('article.edit');
-
-
+        $article = article::find($id); // استخدم اسم النموذج بالأحرف الصغيرة
+        return view('article.edit', ['article' => $article]);
     }
 
     /**
@@ -63,17 +64,17 @@ class ArticleController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        // $article = article::find($id);
-        // $article->update($request->post());
-        // if ($image = $request->file('image')) {
-        //     $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-        //     $request->image->move(public_path('images'), $profileImage);
-        //     $article->image = "$profileImage";
-        // }else{
-        //     unset($request['image']);
-        // }
-        // $article->save();
-        // return redirect()->route('articles.index');
+        $article = article::find($id);
+        $article->update($request->post());
+        if ($image = $request->file('image')) {
+            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $request->image->move(public_path('images'), $profileImage);
+            $article->image = "$profileImage";
+        }else{
+            unset($request['image']);
+        }
+        $article->save();
+        return redirect()->route('articles.index');
     }
 
     /**
@@ -81,6 +82,8 @@ class ArticleController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+       $article = article::find($id);
+       $article->delete();
+       return redirect()->route('articles.index');
     }
 }
