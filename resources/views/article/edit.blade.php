@@ -28,26 +28,31 @@
                                 @csrf
                                 @method('PUT')
                                 <div class="mb-4">
+                                    <label for="">image</label>
                                     <input type="file" name="image"
                                         class="text-sm focus:shadow-soft-primary-outline leading-5.6 ease-soft block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding py-2 px-3 font-normal text-gray-700 transition-all focus:border-fuchsia-300 focus:bg-white focus:text-gray-700 focus:outline-none focus:transition-shadow"
                                         placeholder="categorie" aria-label="Password" aria-describedby="password-addon">
                                 </div>
                                 <div class="mb-4">
+                                    <label for="">designation</label>
                                     <input name="designation" type="text" value="{{ $article->designation }}"
                                         class="text-sm focus:shadow-soft-primary-outline leading-5.6 ease-soft block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding py-2 px-3 font-normal text-gray-700 transition-all focus:border-fuchsia-300 focus:bg-white focus:text-gray-700 focus:outline-none focus:transition-shadow"
                                         placeholder="categorie" aria-label="Password" aria-describedby="password-addon">
                                 </div>
                                 <div class="mb-4">
+                                    <label for="">description</label>
                                     <input name="description" type="text" value="{{ $article->description }}"
                                         class="text-sm focus:shadow-soft-primary-outline leading-5.6 ease-soft block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding py-2 px-3 font-normal text-gray-700 transition-all focus:border-fuchsia-300 focus:bg-white focus:text-gray-700 focus:outline-none focus:transition-shadow"
                                         placeholder="categorie" aria-label="Password" aria-describedby="password-addon">
                                 </div>
                                 <div class="mb-4">
+                                    <label for="">tva</label>
                                     <input name="tva" type="number" value="{{ $article->tva }}"
                                         class="text-sm focus:shadow-soft-primary-outline leading-5.6 ease-soft block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding py-2 px-3 font-normal text-gray-700 transition-all focus:border-fuchsia-300 focus:bg-white focus:text-gray-700 focus:outline-none focus:transition-shadow"
                                         placeholder="categorie" aria-label="Password" aria-describedby="password-addon">
                                 </div>
                                 <div class="mb-4">
+                                    <label for="">status</label>
                                     <input name="status" type="number" value="{{ $article->status }}"
                                         class="text-sm focus:shadow-soft-primary-outline leading-5.6 ease-soft block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding py-2 px-3 font-normal text-gray-700 transition-all focus:border-fuchsia-300 focus:bg-white focus:text-gray-700 focus:outline-none focus:transition-shadow"
                                         placeholder="categorie" aria-label="Password" aria-describedby="password-addon">
