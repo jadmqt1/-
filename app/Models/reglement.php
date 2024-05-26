@@ -9,6 +9,13 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class reglement extends Model
 {
+    protected $fillable = [
+        'date',
+        'montant',
+        'bon_livraison_id',
+        'mode_regelment_id',
+    ];
+   
     public function bonliv():HasMany
     {
         return $this->hasMany(BonLivraison::class);

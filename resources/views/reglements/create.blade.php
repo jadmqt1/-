@@ -1,7 +1,15 @@
-{{-- @extends('layout.app')
+<?php
+
+use App\Models\BonLivraison;
+use App\Models\mode_Regl;
+
+$modes = mode_Regl::all();
+$livraisons = BonLivraison::all();
+?>
+
+
+@extends('layout.app')
 @section('content')
-
-
 <main class="mt-0 transition-all duration-200 ease-soft-in-out ps">
     <section class="min-h-screen mb-32">
         <div class="relative flex items-start pt-12 pb-56 m-4 overflow-hidden bg-center bg-cover min-h-50-screen rounded-xl"
@@ -25,14 +33,32 @@
                         class="relative z-0 flex flex-col min-w-0 break-words bg-white border-0 shadow-soft-xl rounded-2xl bg-clip-border">
 
                         <div class="flex-auto p-6">
-                            <form action={{route("categories.store")}} method="post">
+                            <form action={{route("reglements.store")}} method="post">
                                 @csrf
 
                                 <div class="mb-4">
-                                    <input name="categorie" type="text"
+                                    <label for="cateeg">Date</label>
+                                    <input name="date" type="text"
                                         class="text-sm focus:shadow-soft-primary-outline leading-5.6 ease-soft block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding py-2 px-3 font-normal text-gray-700 transition-all focus:border-fuchsia-300 focus:bg-white focus:text-gray-700 focus:outline-none focus:transition-shadow"
                                         placeholder="categorie" aria-label="Password" aria-describedby="password-addon">
                                 </div>
+                                <div class="mb-4">
+                                    <label for="cateeg">Montant</label>
+                                    <input name="montant" type="text"
+                                        class="text-sm focus:shadow-soft-primary-outline leading-5.6 ease-soft block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding py-2 px-3 font-normal text-gray-700 transition-all focus:border-fuchsia-300 focus:bg-white focus:text-gray-700 focus:outline-none focus:transition-shadow"
+                                        placeholder="categorie" aria-label="Password" aria-describedby="password-addon">
+                                </div>
+
+                                <select class="form-control"  name="bon_livraison_id">
+                                     @foreach($livraisons as $livraison)
+                                        <option value="{{ $livraison->id }}">{{ $livraison->id }}</option>
+                                     @endforeach
+                                </select>
+                                <select class="form-control"  name="mode_regelment_id">
+                                     @foreach($modes as $mode)
+                                        <option value="{{ $mode->id }}">{{ $mode->mode }}</option>
+                                     @endforeach
+                                </select>
 
                                 <div class="text-center">
                                     <button type="submit"
@@ -48,7 +74,7 @@
         </div>
     </section>
 
-    <footer class="py-12">
+    {{-- <footer class="py-12">
         <div class="container">
             <div class="flex flex-wrap -mx-3">
                 <div class="flex-shrink-0 w-full max-w-full mx-auto mb-6 text-center lg:flex-0 lg:w-8/12">
@@ -93,7 +119,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> --}}
 
     <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
         <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
@@ -285,5 +311,4 @@
 </script>
 <iframe id="_hjSafeContext_4041043" title="_hjSafeContext" tabindex="-1" aria-hidden="true" src="about:blank"
     style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe>
-
-@endsection --}}
+@endsection

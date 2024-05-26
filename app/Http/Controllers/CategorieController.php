@@ -13,7 +13,7 @@ class CategorieController extends Controller
     public function index()
     {
         $categories = categorie::all();
-        return view('categorie.index',['categories' => $categories]);
+        return view('categories.index',['categories' => $categories]);
     }
 
     /**
@@ -22,7 +22,7 @@ class CategorieController extends Controller
     public function create()
     {
        
-        return view('categorie.create');
+        return view('categories.create');
     }
 
     /**
@@ -38,7 +38,7 @@ class CategorieController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(categorie $categorie)
+    public function show(categorie $categories)
     {
         //
     }
@@ -49,7 +49,7 @@ class CategorieController extends Controller
     public function edit($id)
     {
         $categorie = categorie::find($id);
-        return view('categorie.edit',['categorie' => $categorie]);
+        return view('categories.edit',['categories' => $categorie]);
     }
 
     /**
@@ -57,7 +57,9 @@ class CategorieController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $categories = Categorie::find($id);
+        $categories->update($request->post());
+        return redirect()->route('categories.index');
     }
 
     /**

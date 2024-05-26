@@ -14,7 +14,7 @@ class ArticleController extends Controller
 {
 
     $articles = Article::all();
-    return view('article.index', ['articles' => $articles]);
+    return view('articles.index', ['articles' => $articles]);
 }
 
 
@@ -24,7 +24,7 @@ class ArticleController extends Controller
     public function create()
     {
         $categories = categorie::all();
-        return view ('article.create',['categories'=>$categories]);
+        return view ('articles.create',['categories'=>$categories]);
     }
 
     /**
@@ -56,7 +56,7 @@ class ArticleController extends Controller
     public function edit($id)
     {
         $article = article::find($id); // استخدم اسم النموذج بالأحرف الصغيرة
-        return view('article.edit', ['article' => $article]);
+        return view('articles.edit', ['article' => $article]);
     }
 
     /**

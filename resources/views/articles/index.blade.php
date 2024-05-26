@@ -7,7 +7,7 @@
 <div class="flex flex-wrap -mx-3">
     <a href='{{route("articles.create")}}' type="button"
         class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">ajouter
-        categorie</a>
+        article</a>
     <div class="flex-none w-full max-w-full px-3">
         <div
             class="relative flex flex-col min-w-0 mb-6 break-words bg-white border-0 border-transparent border-solid shadow-soft-xl rounded-2xl bg-clip-border">
@@ -101,7 +101,7 @@
                                 <td
                                     class="p-2 align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
                                     <form action="{{ route('articles.destroy', $article->id) }}" method="post">
-                                        <a href="{{ route('articlesEdit.edit', $article->id) }}"
+                                        <a href="{{ route('articles.edit', $article->id) }}"
                                             class="text-white bg-gradient-to-r from-green-500 via-green-500 to-green-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none {{-- focus:ring-red-300 dark:focus:ring-red-800 --}} font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">edit</a>
                                         @csrf
                                         @method('DELETE')

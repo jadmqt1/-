@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('bon_livraisons', function (Blueprint $table) {
+        Schema::create('bonlivraisons', function (Blueprint $table) {
             $table->id();
             $table->date('date');
             $table->tinyInteger('regle');
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('bon_livraisons');
+        Schema::dropIfExists('bonlivraisons');
     }
 };

@@ -9,6 +9,10 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class BonLivraison extends Model
 {
+    protected $fillable = [
+        'date',
+        'regle',
+    ];
     public function client():BelongsTo
     {
         return $this->belongsTo(client::class);

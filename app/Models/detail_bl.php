@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class detail_bl extends Model
 {
+    protected $fillable =  ['article_id','bon_livraison_id','qte','prix'];
 
     use HasFactory;
     public function article():HasMany

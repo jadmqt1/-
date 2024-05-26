@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class mode_Regl extends Model
 {
     use HasFactory;
+    protected $table = 'mode_regelments';
+    protected $fillable = [
+        'mode',
+    ];
 }
